@@ -29,8 +29,8 @@
   			echo date("Y m d");
   		?> 
   		<p>
-  			<a href="/login.php">Login</a>
-  			<a href="/register.php">Register</a>
+  			<a href="php_login/login.php">Login</a>
+  			<a href="php_login/register.php">Register</a>
   		</p>
   	</div>
 
