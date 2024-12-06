@@ -1,8 +1,6 @@
 <?php 
 
-	// Allow the config
 	define('__CONFIG__', true);
-	// Require the config
 	require_once "inc/config.php"; 
 
 	Page::ForceDashboard();
@@ -13,11 +11,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="follow">
 
     <title>Login Page</title>
 
-    <base href="/" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.24/css/uikit.min.css" />
   </head>
 
@@ -30,16 +26,16 @@
 				<h2>Login</h2>
 
 			    <div class="uk-margin">
-			        <label class="uk-form-label" for="form-stacked-text">Email</label>
+			        <label class="uk-form-label" for="eml">Email</label>
 			        <div class="uk-form-controls">
-			            <input class="uk-input" id="form-stacked-text eml" type="email" required placeholder="email@email.com">
+			            <input class="uk-input" id="eml" type="email" required placeholder="email@email.com">
 			        </div>
 			    </div>
 
 			    <div class="uk-margin">
-			        <label class="uk-form-label" for="form-stacked-text">Password</label>
+			        <label class="uk-form-label" for="psw">Password</label>
 			        <div class="uk-form-controls">
-			            <input class="uk-input" id="form-stacked-text psw" type="password" required placeholder="Your Password">
+			            <input class="uk-input" id="psw" type="password" required placeholder="Your Password">
 			        </div>
 			    </div>
 

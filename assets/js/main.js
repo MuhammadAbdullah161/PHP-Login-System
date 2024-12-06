@@ -24,11 +24,8 @@ $(document)
 		return false;
 	}
 
-	// Assuming the code gets this far, we can start the ajax process
 	_error.hide();
-	console.log(dataObj);  // Log the form data being sent
-
-
+	
 	$.ajax({
 		type: 'POST',
 		url: '/php_login/ajax/register.php',
@@ -37,7 +34,6 @@ $(document)
 		async: true,
 	})
 	.done(function ajaxDone(data) {
-		// Whatever data is 
 		if(data.redirect !== undefined) {
 			window.location = data.redirect;
 		} else if(data.error !== undefined) {
@@ -45,13 +41,6 @@ $(document)
 				.text(data.error)
 				.show();
 		}
-	})
-	.fail(function ajaxFailed(e) {
-		// This failed 
-	})
-	.always(function ajaxAlwaysDoThis(data) {
-		// Always do
-		console.log('Always');
 	})
 
 	return false;
@@ -80,10 +69,7 @@ $(document)
 		return false;
 	}
 
-	// Assuming the code gets this far, we can start the ajax process
 	_error.hide();
-	console.log(dataObj);  // Log the form data being sent
-
 
 	$.ajax({
 		type: 'POST',
@@ -93,7 +79,6 @@ $(document)
 		async: true,
 	})
 	.done(function ajaxDone(data) {
-		// Whatever data is 
 		if(data.redirect !== undefined) {
 			window.location = data.redirect;
 		} else if(data.error !== undefined) {
@@ -101,13 +86,6 @@ $(document)
 				.html(data.error)
 				.show();
 		}
-	})
-	.fail(function ajaxFailed(e) {
-		// This failed 
-	})
-	.always(function ajaxAlwaysDoThis(data) {
-		// Always do
-		console.log('Always');
 	})
 
 	return false;
