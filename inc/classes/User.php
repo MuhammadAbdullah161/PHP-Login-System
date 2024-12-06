@@ -1,10 +1,8 @@
 <?php
-
-// If there is no constant defined called __CONFIG__, do not load this file 
+ 
 if(!defined('__CONFIG__')) {
 	exit('You do not have a config file');
 }
-
 
 class User {
 
@@ -39,18 +37,6 @@ class User {
 			header("Location: /php-login/logout.php"); exit;
 		}
 	}
-
-	public function setEmail($new_email) {
-
-		// $User = new User(1);
-		// $User->setEmail("new@email.com");
-
-		// echo $this->email; // The current email address
-		// echo $this->user_id; // The existing user id
-		
-		// $this->con->prepare("...")		
-	}
-
 
 	public static function Find($email, $return_assoc = false) {
 
