@@ -1,11 +1,13 @@
 $(document)
-.on("submit", "form.js-register, form.js-login", function(event) {
+.on("submit", "form.js-register", function(event) {
 	event.preventDefault();
 
 	var _form = $(this);
 	var _error = $(".js-error", _form);
 
 	var dataObj = {
+		fname: $("#fnm").val(),
+		lname: $("#lnm").val(),
 		email: $("input[type='email']", _form).val(),
 		password: $("input[type='password']", _form).val()
 	};
@@ -24,10 +26,12 @@ $(document)
 
 	// Assuming the code gets this far, we can start the ajax process
 	_error.hide();
+	console.log(dataObj);  // Log the form data being sent
+
 
 	$.ajax({
 		type: 'POST',
-		url: '/ajax/register.php',
+		url: '/php_login/ajax/register.php',
 		data: dataObj,
 		dataType: 'json',
 		async: true,
@@ -78,10 +82,12 @@ $(document)
 
 	// Assuming the code gets this far, we can start the ajax process
 	_error.hide();
+	console.log(dataObj);  // Log the form data being sent
+
 
 	$.ajax({
 		type: 'POST',
-		url: '/ajax/login.php',
+		url: '/php_login/ajax/login.php',
 		data: dataObj,
 		dataType: 'json',
 		async: true,

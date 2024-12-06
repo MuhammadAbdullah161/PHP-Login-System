@@ -12,11 +12,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="follow">
 
-    <title>Page Title</title>
+    <title>Registration</title>
 
     <base href="/" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.24/css/uikit.min.css" />
@@ -30,17 +29,31 @@
 				
 				<h2>Register</h2>
 
-			    <div class="uk-margin">
-			        <label class="uk-form-label" for="form-stacked-text">Email</label>
+				<div class="uk-margin">
+			        <label class="uk-form-label" for="fnm">First Name</label>
 			        <div class="uk-form-controls">
-			            <input class="uk-input" id="form-stacked-text" type="email" required='required' placeholder="email@email.com">
+			            <input class="uk-input" id="fnm" type="text" required placeholder="First Name">
+			        </div>
+			    </div>
+
+				<div class="uk-margin">
+			        <label class="uk-form-label" for="lnm">Last Name</label>
+			        <div class="uk-form-controls">
+			            <input class="uk-input" id="lnm" type="text" required placeholder="Last Name">
 			        </div>
 			    </div>
 
 			    <div class="uk-margin">
-			        <label class="uk-form-label" for="form-stacked-text">Passphrase</label>
+			        <label class="uk-form-label" for="eml">Email</label>
 			        <div class="uk-form-controls">
-			            <input class="uk-input" id="form-stacked-text" type="password" required='required' placeholder="Your passphrase">
+			            <input class="uk-input" id="eml" type="email" required placeholder="email@email.com">
+			        </div>
+			    </div>
+
+			    <div class="uk-margin">
+			        <label class="uk-form-label" for="psw">Passphrase</label>
+			        <div class="uk-form-controls">
+			            <input class="uk-input" id="psw" type="password" required placeholder="Your passphrase">
 			        </div>
 			    </div>
 
