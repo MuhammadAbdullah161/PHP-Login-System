@@ -9,22 +9,32 @@ class Filter {
 	
 	/**
 	 *  @param	string	$string		String to filter before putting inside InnoDB
-	 *  @return            			Filters and returns a valid string to put into the Database.
+	 *  @return            			/Filters and returns a valid string to put into the Database.
 	 *  @note				If the $html arg is false, new lines (\n) will replaced with __BR__ and re-converted to \r\n afterwards.
 	 * 					.. This is to ensure new lines are kept in place.
 	 */
 	public static function String( $string, $html = false ) {
-		if(!$html) {
-			$string = filter_var( $string , FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW);
+		if (!$html) {
+			// Strip tags and optionally other unwanted characters
+			$string = strip_tags($string);
+			$string = preg_replace('/[\x00-\x1F\x7F]/', '', $string); // Remove control characters
 		} else {
-			$string = filter_var( $string , FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+			// Allow HTML special characters to be sanitized safely
+			$string = htmlspecialchars($string, ENT_QUOTES, 'UTF-8');
 		}
 		return $string;
+	}
+
+	public static function Name($string) {
+		// Strip HTML tags and unwanted characters
+		$string = strip_tags($string);
+		$string = preg_replace('/[^a-zA-Z\s\-]/', '', $string); // Allow only letters, spaces, and hyphens
+		return trim($string);
 	}
 	
 	/**
 	 *  @param	string	$email		Email to filter before putting inside InnoDB
-	 *  @return            			Filters and returns a valid or invalid email address
+	 *  @return            			/Filters and returns a valid or invalid email address
 	 */
 	public static function Email( $email ) {
 		return filter_var( $email , FILTER_SANITIZE_EMAIL);
@@ -32,7 +42,7 @@ class Filter {
 	
 	/**
 	 *  @param	string	$url		String to filter before putting inside InnoDB
-	 *  @return            			Filters and returns a valid or invalid URL
+	 *  @return            			/Filters and returns a valid or invalid URL
 	 */
 	public static function URL( $url ) {
 		return filter_var( $url , FILTER_SANITIZE_URL);

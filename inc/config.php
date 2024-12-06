@@ -10,11 +10,7 @@
 		session_start();
 	}
 
-	// Our config is below
-	// Allow errors
-	error_reporting(-1);
-	ini_set('display_errors', 'On');
-	
+	// Our config is below	
 
 	// Include the DB.php file;
 	include_once "classes/DB.php";
@@ -24,5 +20,4 @@
 	include_once "functions.php";
 
 	$con = DB::getConnection();
-
 ?>

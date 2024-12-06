@@ -10,11 +10,10 @@
 <html lang="en">
   <head> 
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="follow">
 
-    <title>Page Title</title>
+    <title>Login Form</title>
 
     <base href="/" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.24/css/uikit.min.css" />
@@ -25,11 +24,12 @@
   	<div class="uk-section uk-container">
   		<?php 
   			echo "Hello world. Today is: ";
-  			echo date("Y m d");
+  			echo date("d m Y");
   		?> 
   		<p>
-  			<a href="/login.php">Login</a>
-  			<a href="/register.php">Register</a>
+  			<a href="/php_login/login.php">Login</a>
+  			<a href="/php_login/register.php">Register</a>
+			<a href="/php_login/dashboard.php">Dashboard</a>
   		</p>
   	</div>
 
