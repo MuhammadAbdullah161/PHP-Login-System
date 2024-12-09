@@ -19,7 +19,7 @@
   	<div class="uk-section uk-container">
   		<?php 
   			echo "Hello world. Today is: ";
-  			echo date("d m Y");
+  			echo date("d-m-Y");
   		?> 
   		<p>
   			<a href="/php_login/login.php">Login</a>
