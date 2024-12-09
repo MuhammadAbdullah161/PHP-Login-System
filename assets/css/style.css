@@ -1,0 +1,42 @@
+body, html {
+    height: 100%;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url("/php_login/assets/images/sigdoc.webp");
+    background-size: cover;
+    background-position: center;
+}
+.cardt {
+    text-align: center;
+    width: 60%;
+    padding: 5vw;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 5px;
+}
+.custbtn {
+    width: 100%;
+    max-width: 12vw;
+    min-width: 100px;
+    margin: 1vh auto; 
+    text-align: center;
+    padding: 5px 10px; 
+    border-radius: 3px;
+    background-color: rgb(241, 202, 74);
+}
+
+.custbtn:hover {
+    background-color: goldenrod;
+}
+
+.uk-input {
+    border-color: gold;
+}
+
+.uk-input:focus {
+    border-color: goldenrod;
+}
