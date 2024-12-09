@@ -49,7 +49,7 @@
 			    <div class="uk-margin">
 			        <label class="uk-form-label" for="psw">Password</label>
 			        <div class="uk-form-controls">
-			            <input class="uk-input" id="psw" type="password" required placeholder="Your passphrase">
+			            <input class="uk-input" id="psw" type="password" required placeholder="Your password">
 			        </div>
 			    </div>
 
