@@ -12,14 +12,19 @@ $(document)
 		password: $("input[type='password']", _form).val()
 	};
 
-	if(dataObj.email.length < 6) {
+	if(dataObj.fname.length < 2 || dataObj.lname.length < 2) {
+		_error
+			.text("Please enter a valid first/last name")
+			.show();
+		return false;
+	} else if(dataObj.email.length < 6) {
 		_error
 			.text("Please enter a valid email address")
 			.show();
 		return false;
-	} else if (dataObj.password.length < 11) {
+	} else if (dataObj.password.length < 8) {
 		_error
-			.text("Please enter a passphrase that is at least 11 characters long.")
+			.text("Please enter a password that is at least 8 characters long.")
 			.show();
 		return false;
 	}
@@ -45,7 +50,7 @@ $(document)
 
 	return false;
 })
-// 
+
 .on("submit", "form.js-login", function(event) {
 	event.preventDefault();
 
@@ -62,9 +67,9 @@ $(document)
 			.text("Please enter a valid email address")
 			.show();
 		return false;
-	} else if (dataObj.password.length < 11) {
+	} else if (dataObj.password.length < 8) {
 		_error
-			.text("Please enter a passphrase that is at least 11 characters long.")
+			.text("Please enter a password that is at least 8 characters long.")
 			.show();
 		return false;
 	}

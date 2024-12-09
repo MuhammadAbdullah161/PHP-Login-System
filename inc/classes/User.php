@@ -32,8 +32,6 @@ class User {
 			$this->user_id 		= (int) $user->user_id;
 			$this->reg_time 	= (string) $user->reg_time;
 		} else {
-			// No user.
-			// Redirect to to logout.
 			header("Location: /php-login/logout.php"); exit;
 		}
 	}
@@ -42,7 +40,6 @@ class User {
 
 		$con = DB::getConnection();
 
-		// Make sure the user does not exist. 
 		$email = (string) Filter::String( $email );
 
 		$findUser = $con->prepare("SELECT user_id, password FROM users WHERE email = LOWER(:email) LIMIT 1");
@@ -56,7 +53,5 @@ class User {
 		$user_found = (boolean) $findUser->rowCount();
 		return $user_found;
 	}
-
-
 }
 ?>
